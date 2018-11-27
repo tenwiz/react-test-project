@@ -26,7 +26,7 @@ const menuRoutes = [{
     children: []
   },
   {
-    name: 'Vm Images',
+    name: 'VM Images',
     icon: {
       prefix: 'far',
       iconName: 'user'

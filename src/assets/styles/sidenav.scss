@@ -1,0 +1,43 @@
+.SideNav {
+    background: #32404F;
+    width: 280px;
+    height: 100vh;
+    padding: 50px 0;
+    color: #76818F;
+    .ProfileCard {
+        padding: 0 25px;
+        margin-bottom: 50px;
+        color: #FFFFFF;
+        .avatar {
+            margin-bottom: 15px;
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .nav {
+        .nav-link {
+            display: flex;
+            align-items: center;
+            height: 45px;
+            color: #A9B1C0;
+            padding: 0 25px;
+            &:hover {
+               background-color: #2C3845;
+            }
+            &:active {
+                background-color: #2C3845;
+                color: #FFFFFF;
+            }
+            .icon {
+                margin-right: 10px;
+                width: 20px;
+            }
+        }
+        .child-route {
+            padding: 0 56px;
+        }
+    }
+}

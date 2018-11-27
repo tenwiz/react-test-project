@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Nav, NavLink } from 'reactstrap';
 import menuRoutes from '../../constants/menuRoutes';
 import ProfileCard from './profileCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class SideNav extends Component {
   render() {
@@ -10,9 +11,25 @@ class SideNav extends Component {
         <ProfileCard />
         <Nav vertical={true}>
           {menuRoutes.map(route => (
-              <NavLink key={route.name} href={route.page}>
+            <div key={route.name} >
+              <NavLink route={route.page}>
+                <FontAwesomeIcon className="icon" icon={route.icon} />
                 {route.name}
               </NavLink>
+              {
+                route.children.length > 0 && (
+                  <div>
+                    {
+                      route.children.map((child) => (
+                        <NavLink className="child-route" route={child.page} key={child.name}>
+                          {child.name}
+                        </NavLink>
+                      ))
+                    }
+                  </div>
+                )
+              }
+            </div>
             ))
           }
         </Nav>
