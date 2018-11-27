@@ -21,7 +21,7 @@ class SideNav extends Component {
         <Nav vertical={true}>
           {menuRoutes.map(route => (
             <div key={route.name} >
-              <NavLink route={route.page}>
+              <NavLink href={route.page}>
                 <FontAwesomeIcon className="icon" icon={route.icon} />
                 {isCollapsed && route.name}
               </NavLink>

@@ -40,7 +40,7 @@ const menuRoutes = [{
       prefix: 'far',
       iconName: 'user'
     },
-    page: '/courses',
+    page: '/showcourses',
     children: []
   },
   {
