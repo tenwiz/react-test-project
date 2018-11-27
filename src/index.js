@@ -7,7 +7,7 @@ import configureStore, { history } from './store';
 
 import './index.scss';
 
-import Home from './components/home';
+import Home from './containers/home';
 import * as serviceWorker from './serviceWorker';
 
 const store = configureStore();

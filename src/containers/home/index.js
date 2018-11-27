@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
+import SideNav from '../../components/sidenav'
 
 class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Button color="primary">Hello!</Button>
+        <SideNav />
       </div>
     );
   }
