@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { toggleSideNav } from '../../actions/appAction';
@@ -21,10 +21,10 @@ class SideNav extends Component {
         <Nav vertical={true}>
           {menuRoutes.map(route => (
             <div key={route.name} >
-              <NavLink href={route.page}>
+              <Link className="nav-link" to={route.page}>
                 <FontAwesomeIcon className="icon" icon={route.icon} />
                 {isCollapsed && route.name}
-              </NavLink>
+              </Link>
               {
                 route.children.length > 0 && (
                   <div>
