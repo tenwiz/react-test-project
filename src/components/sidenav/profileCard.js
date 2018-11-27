@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import avatar from '../../assets/images/myAvatar.png';
 class ProfileCard extends Component {
   render() {
-    return (
+    const { small } = this.props;
+    return small ? (
       <div className="ProfileCard">
         <div className="avatar">
             <img src={avatar} alt="profile" />
@@ -11,6 +12,10 @@ class ProfileCard extends Component {
             Firstname lastname
         </div>
       </div>
+    ) : (
+        <div className="ProfileCard">
+            <div className="logo">FL</div>
+        </div>
     );
   }
 }

@@ -1,20 +1,28 @@
 .SideNav {
     background: #32404F;
-    width: 280px;
     height: 100vh;
     padding: 50px 0;
     color: #76818F;
+    position: relative;
     .ProfileCard {
-        padding: 0 25px;
         margin-bottom: 50px;
         color: #FFFFFF;
         .avatar {
+            padding: 0 25px;
             margin-bottom: 15px;
             img {
                 width: 60px;
                 height: 60px;
                 border-radius: 50%;
             }
+        }
+        .logo {
+            padding: 10px;
+            text-align: center;
+            background: #53B095;
+        }
+        .name {
+            text-align: center;
         }
     }
     .nav {
@@ -39,5 +47,10 @@
         .child-route {
             padding: 0 56px;
         }
+    }
+    .toggleMenu {
+        position: absolute;
+        top: 5px;
+        right: -50px;
     }
 }

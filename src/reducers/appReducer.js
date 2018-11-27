@@ -9,7 +9,7 @@ export default (state = initialState, action) => {
         case TOGGLE_SIDENAV:
             return {
                 ...state,
-                isCollapsed: !action.data,
+                isCollapsed: action.data,
             };
 
         default:
