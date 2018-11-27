@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
-import SideNav from '../../components/sidenav'
+import { Route, Switch } from 'react-router';
+import SideNav from '../../components/sidenav';
+import Courses from '../../containers/courses';
+import CourseDetails from '../../containers/courseDetails';
+import Welcome from '../../containers/welcome';
 
 class Home extends Component {
   render() {
     return (
       <div className="home">
         <SideNav />
+        <div className="page-wrapper">
+          <Switch>
+            <Route exact path="/courses" render={() => (<Courses />)} />
+            <Route exact path="/courses/detail" render={() => (<CourseDetails />)} />
+            <Route exact path="/" render={() => (<Welcome />)} />
+          </Switch>
+        </div>
       </div>
     );
   }

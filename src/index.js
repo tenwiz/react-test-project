@@ -24,7 +24,7 @@ ReactDOM.render(
     <ConnectedRouter history={history}>
       <div>
         <Switch>
-          <Route exact path="/" render={() => (<Home />)} />
+          <Route path="/" render={() => (<Home />)} />
         </Switch>
       </div>
     </ConnectedRouter>
